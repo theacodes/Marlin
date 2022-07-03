@@ -70,9 +70,9 @@
 //
 // Steppers
 //
-#define X_STEP_PIN                          PB15
-#define X_DIR_PIN                           PB14
-#define X_ENABLE_PIN                        PD9
+#define I_STEP_PIN                          PB15
+#define I_DIR_PIN                           PB14
+#define I_ENABLE_PIN                        PD9
 
 #define Y_STEP_PIN                          PE15
 #define Y_DIR_PIN                           PE14
@@ -82,9 +82,9 @@
 #define Z_DIR_PIN                           PB1
 #define Z_ENABLE_PIN                        PE9
 
-#define I_STEP_PIN                          PC4
-#define I_DIR_PIN                           PA4
-#define I_ENABLE_PIN                        PB0
+#define X_STEP_PIN                          PC4
+#define X_DIR_PIN                           PA4
+#define X_ENABLE_PIN                        PB0
 
 #define J_STEP_PIN                          PE11
 #define J_DIR_PIN                           PE10
@@ -101,8 +101,8 @@
    */
   #error "SPI drivers require a custom jumper configuration, see comment above! Comment out this line to continue."
 
-  #if AXIS_HAS_SPI(X)
-    #define X_CS_PIN                        PD8
+  #if AXIS_HAS_SPI(I)
+    #define I_CS_PIN                        PD8
   #endif
   #if AXIS_HAS_SPI(Y)
     #define Y_CS_PIN                        PB12
@@ -110,8 +110,8 @@
   #if AXIS_HAS_SPI(Z)
     #define Z_CS_PIN                        PE8
   #endif
-  #if AXIS_HAS_SPI(I)
-    #define I_CS_PIN                        PC5
+  #if AXIS_HAS_SPI(X)
+    #define X_CS_PIN                        PC5
   #endif
   #if AXIS_HAS_SPI(J)
     #define J_CS_PIN                        PE12
@@ -122,8 +122,8 @@
 
 #elif HAS_TMC_UART
 
-  #define X_SERIAL_TX_PIN                   PD8
-  #define X_SERIAL_RX_PIN        X_SERIAL_TX_PIN
+  #define I_SERIAL_TX_PIN                   PD8
+  #define I_SERIAL_RX_PIN        I_SERIAL_TX_PIN
 
   #define Y_SERIAL_TX_PIN                   PB12
   #define Y_SERIAL_RX_PIN        Y_SERIAL_TX_PIN
@@ -131,8 +131,8 @@
   #define Z_SERIAL_TX_PIN                   PE8
   #define Z_SERIAL_RX_PIN        Z_SERIAL_TX_PIN
 
-  #define I_SERIAL_TX_PIN                   PC5
-  #define I_SERIAL_RX_PIN        I_SERIAL_TX_PIN
+  #define X_SERIAL_TX_PIN                   PC5
+  #define X_SERIAL_RX_PIN        X_SERIAL_TX_PIN
 
   #define J_SERIAL_TX_PIN                   PE12
   #define J_SERIAL_RX_PIN        J_SERIAL_TX_PIN
