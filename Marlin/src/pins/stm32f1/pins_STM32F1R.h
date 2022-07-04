@@ -37,8 +37,8 @@
 // Limit Switches
 //
 #define X_STOP_PIN                          PB3
-#define Y_STOP_PIN                          PB4
-#define Z_STOP_PIN                          PB5
+#define Z_STOP_PIN                          PB4
+#define Y_STOP_PIN                          PB5
 
 //
 // Steppers
